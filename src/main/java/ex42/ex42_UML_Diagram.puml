@@ -1,0 +1,73 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+App : +static void main() throws IOException
+class Scanner {
+input : Scanner
+input.hasNextLine()
+}
+
+class name
+{
+name : String[]
+}
+
+class NameListArrayList {
+listOfNames: String[]
+listOfNames.add(name)
+listOfNames.size()
+
+}
+
+class firstNameArrayList
+{
+firstName : String[]
+firstName.add(separateRecords[0])
+firstName.get()
+}
+
+class lastNameArrayList
+{
+lastName : String[]
+lastName.add(separateRecords[1])
+lastName.get()
+}
+
+class salariesArrayList
+{
+salaries : String[]
+salaries.add(separateRecords[2])
+salaries.get()
+}
+
+class separateRecords
+{
+separateRecords : String[]
+}
+
+
+class File
+{
+file : File
+
+}
+
+App *- File : contains >
+App *- Scanner : contains >
+App *- listOfNames : containts >
+App *- name : contains >
+App *- firstName : contains >
+App *- lastName : contains >
+App *- salaries : contains >
+App *- separateRecords : contains >
+
+separateRecords -- firstNames
+separateRecords -- lastName
+separateRecords -- salaries
+Scanner -- File
+Scanner -- name
+name -- listOfNames
+listOfNames -- separateRecords
+
+
+@enduml

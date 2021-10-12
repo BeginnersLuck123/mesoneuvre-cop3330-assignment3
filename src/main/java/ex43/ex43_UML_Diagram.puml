@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+class App
+{
++static void main() throws IOException
++static void website(String siteName)
++static void HTMLFile(String siteName, String author)
++static void JSFolder(String siteName)
++static void CSS(String siteName)
+}
+
+
+class website
+{
+siteFile : String
+siteFolder : File
+siteFolderCreated : boolean
+siteFolder.mkdir()
+}
+
+App *- website
+
+@enduml

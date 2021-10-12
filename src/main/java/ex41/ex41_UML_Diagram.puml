@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+App : +static void main() throws Exception
+
+ArrayList : sortedNames : String[]
+ArrayList : sortedNames.add(name)
+
+
+class File
+{
+file : File
+orderedNamesFile : File
+outputFile.close()
+}
+
+class Scanner {
+input : Scanner
+input.hasNextLine()
+}
+
+class FileWriter
+{
+outputFile : FileWriter
+outputFile.write()
+}
+
+class Collections
+{
+Collections.sort(sortedNames)
+}
+
+App *- ArrayList
+App *- File
+App *- Scanner
+App *- name
+App *- FileWriter
+App *- Collections
+
+Scanner -- File
+Scanner -- name
+ArrayList -- Collections
+ArrayList -- FileWriter
+Collections -- ArrayList
+FileWriter -- File
+@enduml
